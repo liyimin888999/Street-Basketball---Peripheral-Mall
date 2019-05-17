@@ -28,15 +28,13 @@ require(['require.config'], () => {
 			Binds() {
 				let _this = this;
 				//加
-				$("#cart-container").on("click", ".count_plus", function () {
-					//let id = $(this).parent().data("id");
+				$("#details-container").on("click", ".count_plus", function () {
                     //数量
 					let num = $(this).prev().children(".shop_count").val();
                     $(this).prev().children(".shop_count").val(++num);
                 });
 				//减
-                $("#cart-container").on("click", ".count_minus", function (){
-                    //let id = $(this).parent().data("id");
+                $("#details-container").on("click", ".count_minus", function (){
 					let num = $(this).next().children(".shop_count").val();
                     if( --num < 1 ){
                         num = 1;
@@ -54,8 +52,8 @@ require(['require.config'], () => {
 							top: e.clientY
 						},
 						end: {
-							left: $("#car-num").offset().left,
-							top: $("#car-num").offset().top
+							left: $("#cart-num").offset().left,
+							top: $("#cart-num").offset().top
 						},
 						onEnd: function () {
 							this.destroy(); //销毁抛物体
@@ -64,6 +62,8 @@ require(['require.config'], () => {
 					});
 					// 先把cart取出来
 					let cart = localStorage.getItem('cart');
+					let num = Number($('.shop_count').val());
+					console.log(num)
 					if (cart) {
 						cart = JSON.parse(cart);
 						let index = -1;
@@ -72,13 +72,13 @@ require(['require.config'], () => {
 							return shop.id === this.data.id;
 						})) {
 							// 有这条数据
-							cart[index].num++;
+							cart[index].num += num;
 						} else {
 							// 没有这条数据
-							cart.push({ ...this.data, num: 1 });
+							cart.push({ ...this.data, num: num });
 						}
 					} else {
-						cart = [{ ...this.data, num: 1 }];
+						cart = [{ ...this.data, num: num }];
 					}
 					// 重新存cart
 					localStorage.setItem('cart', JSON.stringify(cart));

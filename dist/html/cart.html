@@ -12,13 +12,11 @@
                         </div>
                         <div class="quantity_wrap clearfix fl" data-id="{{item.id}}">
                             <a class="fl count_minus" href="javascript:;" >-</a>
-                            <p class="fl">
-                                <input id="QC0057" type="text" value="{{item.num}}" class="shop_count"/>
-                            </p>
+                            <input type="text" value="{{item.num}}" class="shop_count"/>
                             <a class="fl count_plus" href="javascript:;" >+</a>
                             <span style="clear:both;"></span>
                         </div>
-                        <p class="price fl" id="price"><b>￥{{item.price}}</b></p>
+                        <p class="price fl" id="price">￥<b>{{item.price}}</b></p>
                         <p class="price fl sum-price">￥<b>{{item.num*item.price}}</b></p>
                         <div class="fl cartDel">
                             <a class="icon png24 ht deleteBtn" data-id="{{item.id}}" href="javascript:;">X</a>

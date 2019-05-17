@@ -2,10 +2,10 @@
 						{{each data data}}
 						<li class="fl">
 							<div>
-								<a href="./details.html?id={{data.id}}" target="_blank"><img src="{{data.image}}" /></a>
+								<a href="details.html?id={{data.id}}" target="_blank"><img src="{{data.image}}" /></a>
 								<p class="item_name">{{data.title}}</p>
 								<p class="item_price">￥{{data.price}}</p>
-								<a class="cartAdd" href="details.html">加入购物车</a>
+								<a class="cartAdd" href="details.html?id={{data.id}}">加入购物车</a>
 							</div>
 							<!--加入收藏-->
 							<span class="icon icon_fav png24 ht" id="icon_512" ></span>

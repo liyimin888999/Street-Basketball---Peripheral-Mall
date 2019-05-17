@@ -20,14 +20,42 @@ define(['jquery', 'cookie'], $ => {
     },
 
     search() {
-      // 搜索框功能
-      $("#search-input").on('keyup', function () {
-        let keyWords = $(this).val();
-        // 带上关键字请求jsonp接口
-        $.getJSON('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?cb=?&wd=' + keyWords, data => {
-          console.log(data);
+      var _this = this;
+      $("#search-input").on("keyup", function () {
+        _this.inputValue = $(this).val();
+        _this.addUl(_this.inputValue);
+      }).blur(() => {
+        setTimeout(() => {
+          $("#uls").hide();
+        }, 100)
+        $("#uls").on("click", "li", function () {
+          $("#search-input").val($(this).html());
         })
-      })
+      }).focus(() => {
+        _this.inputValue = $("#search-input").val();
+        _this.addUl(_this.inputValue);
+      });
+    },
+    /**
+    *添加搜索内容框 
+    */
+    addUl(inputValue) {
+      if (inputValue) {
+        $("#uls").remove();
+        $.getJSON("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?cb=?&wd=" + inputValue,
+          function (res) {
+            let arr = res.s;
+            if (arr.length !== 0) {
+              $(".search-input").append("<ul id='uls'>");
+              arr.forEach(function (item, index) {
+                $("#uls").append("<li>" + item + "</li>");
+              });
+            }
+          }
+        );
+      } else {
+        $("#uls").hide();
+      }
     },
     //登录
     isLogin() {
@@ -58,12 +86,12 @@ define(['jquery', 'cookie'], $ => {
         cart = JSON.parse(cart);
         // 以总数量为例
         num = cart.reduce((n, shop) => {
-          n += shop.num;
+          n += Number(shop.num);
           return n;
         }, 0);
 
       }
-      $("#car-num").html(num);
+      $("#cart-num").html(num);
     }
   })
 

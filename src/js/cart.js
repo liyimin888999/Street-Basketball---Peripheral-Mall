@@ -1,5 +1,5 @@
 require(['require.config'], () => {
-	require(['template', 'header', "footer"], (template, header) => {
+	require(['template', 'header', "footer"], (template, Header) => {
 		class Cart {
 			constructor() {
 				this.getType();
@@ -28,34 +28,40 @@ require(['require.config'], () => {
 				$("#cart-container").on("click", ".count_plus", function () {
 					let id = $(this).parent().data("id");
                     //数量
-					let num = $(this).prev().children(".shop_count").val();
-                    $(this).prev().children(".shop_count").val(++num);
+					let num = $(this).prev().val();
+                    $(this).prev().val(++num);
                     //存数量
 					_this.setlocalStorage(num,id);
 					_this.allMoney();
 					// 计算单个商品价格
+					_this.money(this);
+					Header.calcCartNum();
                 });
 				//减
                 $("#cart-container").on("click", ".count_minus", function (){
                     let id = $(this).parent().data("id");
-					let num = $(this).next().children(".shop_count").val();
+					let num = $(this).next().val();
                     if( --num < 1 ){
                         num = 1;
                     }
-                    $(this).next().children(".shop_count").val(num);
+                    $(this).next().val(num);
 					_this.setlocalStorage(num,id);
 					_this.allMoney();
 					// 计算单个商品价格
+					_this.money(this);
+					Header.calcCartNum();
 				});
 				//输入框
                 $(".shop_count").keyup(function(){
 					let num = $(this).val(),
-					id = $(this).parent().parent().data("id");
+					id = $(this).parent().data("id");
                     if(num == "" || num <= 0 || num == undefined || num == null){
                         num = 1;
                     }
                     _this.setlocalStorage(num,id);
-                    _this.allMoney();
+					_this.allMoney();
+					_this.money(this);
+					Header.calcCartNum();
                 })
 				//删除
 				$("#cart-container").on("click", ".deleteBtn", function () {
@@ -64,6 +70,7 @@ require(['require.config'], () => {
 						$(this).parent().parent().remove();
 						_this.delShop(id);
 					}
+					Header.calcCartNum();
 					
 				});
 				//单选
@@ -110,8 +117,7 @@ require(['require.config'], () => {
                 })){
                     obj[i].num = num;
                     localStorage.setItem("cart",JSON.stringify(obj));
-                }
-                
+                }                
             }
 			// 删除
 			delShop(id) {
@@ -132,7 +138,13 @@ require(['require.config'], () => {
                 $("#allprice").html(allprice);
 			}
 			// 计算单个商品总价
-
+			money(_this){
+				
+				let num = Number($(_this).parent().children('.shop_count').val()),
+					price = Number($(_this).parent().next().children('b').html()),
+					money = num * price;
+				$(_this).parent().next().next().children('b').html(money);
+			}
 		}
 		new Cart();
 	})

@@ -145,9 +145,12 @@ div{
 .nav_menu li a {
 	color: #333;
 	line-height: 25px;
+	position: relative;
 }
-.nav_menu li a span{
-	margin-left: 5px;
+.nav_menu li a .cart-num{
+	position: absolute;
+	top: -10px;
+	right: -10px;
 	color: #fff;
 	text-align: center;
 	display: inline-block;
@@ -176,7 +179,7 @@ div{
 	background: #ff9000;
 }
 
-.menubar ul {
+.menubar .fl {
 	float: left;
 	width: 890px;
 	margin: 0 20px;
@@ -185,7 +188,7 @@ div{
 	color: #fff;
 	font-size: 14px;
 }
-.menubar ul li {
+.menubar .fl li {
 	float: left;
 	padding: 0;
 	position: relative;
@@ -193,7 +196,7 @@ div{
 	text-align: center;
 }
 
-.menubar ul li a {
+.menubar .fl li a {
 	display: block;
 	width: 100%;
 	height: 45px;
@@ -287,7 +290,7 @@ form .search-input ul{
 	border-top: none;
 	top:38px;
 	left: -2px;
-	width: 457px;
+	width: 300px;
 	z-index: 100;
 }
 form .search-input ul li{
