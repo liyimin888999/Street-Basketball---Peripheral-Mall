@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>街头篮球-周边商城详情页</title><link rel="stylesheet" href="../css/details.css"></head><body><header id="header-container"></header><div class="mainContent w980"><div class="innerTitle"><h2>产品分类</h2></div><p class="innerTopLink"><a href="../index.html">首页</a>> <a href="javascript:;">周边服饰</a></p></div><div id="details-container"></div><script type="text/html" id="list-details"><div class="product_intro_top clearfix">
+            <div class="product_img fl" >
+            <div class="imglist-img">
+            <a href="javascript:;" class="MagicZoom product_big_img " id="Zoomer">
+                <img src="{{data.image[0]}}" class="zoom-img" data-zoom-image="{{data.image[0]}}"/>
+            </a>
+            </div>
+            <div class="imglist fl" id="gal1">
+                <ul>
+                        <li class="fl">
+                            <a href="javascript:;" data-image="{{data.image[0]}}" data-zoom-image="{{data.image[0]}}">
+                                <img class="s" src="{{data.image[0]}}" />
+                            </a>
+                        </li>
+                        <li class="fl">
+                                <a href="javascript:;" data-image="{{data.image[1]}}" data-zoom-image="{{data.image[1]}}">
+                                    <img class="s" src="{{data.image[1]}}" />
+                                </a>
+                        </li>
+                        <li class="fl">
+                                <a href="javascript:;" data-image="{{data.image[2]}}" data-zoom-image="{{data.image[2]}}">
+                                    <img class="s" src="{{data.image[2]}}" />
+                                </a>
+                        </li>
+                        <li class="fl">
+                                <a href="javascript:;" data-image="{{data.image[3]}}" data-zoom-image="{{data.image[3]}}">
+                                    <img class="s" src="{{data.image[3]}}" />
+                                </a>
+                        </li>
+                </ul>
+            </div>
+            </div>
+            <div class="product_intro_right fl">
+                    <h3>{{data.title}}</h3>
+                    <!--加入收藏-->
+                    <span class="icon icon_fav png24 ht" style="right:-20px;" id="icon_292"
+                        onclick="addCollect();"></span>
+                    <p class="sim_intro">新品正式发售</p>
+                    <p class="product_price" id="ad_product">价格：<b>￥{{data.price}}</b></p>
+                    <div class="freight_wrap clearfix">
+                        <span class="fl big">运费：</span><span class="fl">{{data.province}} 至 <em id="prov">{{data.province}}</em>-<em
+                                id="city">{{data.city}}</em>-<em id="dist">{{data.city}}</em></span><a class="fl icon show"></a><span class="fl"
+                            id='yunfei'>快递：{{data.price}}元</span>
+                        <!--地址选择-->
+                        <div class="city_sel">
+                            <div class="nav">
+                                <ul class="clearfix">
+                                    <li class="fl current prov" style="display:block;">请选择</li>
+                                    <li class="fl city">请选择</li>
+                                    <li class="fl dist">请选择</li>
+                                </ul>
+                            </div>
+                            <ol class="clearfix prov_list"> </ol>
+                            <ol class="clearfix city_list"></ol>
+                            <ol class="clearfix dist_list"></ol>
+                        </div>
+                    </div>
+                    <div class="model" id="model"><b>型号：</b>
+                        <span class="current">M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                        <span>XXL</span>
+                    </div>
+                    <div class="style"><b>颜色：</b>
+                        <span>黑暗低语</span>
+                        <span class="current">斗牛狂潮</span>
+                    </div>
+                    <div class="quantity_wrap clearfix">
+                        <span class="fl big">购买数量：</span>
+                        <a class="fl count_minus" href="javascript:;">-</a>
+                        <p class="fl"><input type="text" value="1" id="buyCount inputNum" class="shop_count" />
+                        </p>
+                        <a class="fl count_plus" href="javascript:;">+</a>
+                        <span id="count" class="fl">（剩余库存{{data.num}}件）</span>
+                    </div>
+                    <div class="shopping_btn clearfix" id="buy">
+                        <a class="fl common_link1" id="edit" href="javascript:;" >立刻购买</a>
+                        <a class="fr common_link2" id="shopcart" data-id="{{data.id}}" href="javascript:;" >放入购物车</a>
+                    </div>
+        </div></script><footer id="footer-container"></footer><script src="../libs/requirejs/require.js" data-main="../js/details.js"></script></body></html>

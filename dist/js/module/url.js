@@ -1,0 +1,1 @@
+"use strict";define(function(){return{rapBaseUrl:"http://rap2api.taobao.org/app/mock/166391/",phpBaseUrl:"http://localhost/Basketball/api/v1/"}});

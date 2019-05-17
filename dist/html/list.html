@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>街头篮球-周边商城列表页</title><link rel="stylesheet" href="../css/list.css"></head><body><header id="header-container"></header><form name="iform" style="margin:0" method="GET"><div class="mainContent w980"><div class="innerTitle"><h2>产品分类</h2></div><p class="innerTopLink"><a href="../index.html">首页/</a>周边所有产品列表</p><div id="list-container"></div><script type="text/html" id="list-page"><ul class="clearfix productList">
+						{{each data data}}
+						<li class="fl">
+							<div>
+								<a href="./details.html?id={{data.id}}" target="_blank"><img src="{{data.image}}" /></a>
+								<p class="item_name">{{data.title}}</p>
+								<p class="item_price">￥{{data.price}}</p>
+								<a class="cartAdd" href="details.html">加入购物车</a>
+							</div>
+							<!--加入收藏-->
+							<span class="icon icon_fav png24 ht" id="icon_512" ></span>
+						</li>
+						{{ /each}}	
+					</ul></script><div class="fr pagination"><p class="fl page_num btn"><em>1</em>/3</p><a class="page_prev fl">&lt;</a> <a class="page_next fl">&gt;</a></div></div></form><footer id="footer-container"></footer><script src="../libs/requirejs/require.js" data-main="../js/list.js"></script></body></html>

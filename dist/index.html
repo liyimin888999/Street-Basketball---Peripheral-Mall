@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>街头篮球-周边商城首页</title><link rel="stylesheet" href="libs/swiper/css/swiper.min.css"><link rel="stylesheet" href="css/index.css"></head><body><header id="header-container"></header><div class="mainbar full"><div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide"><img src="images/index_zb1.jpg"></div><div class="swiper-slide"><img src="images/index_zb2.jpg"></div><div class="swiper-slide"><img src="images/index_zb3.jpg"></div><div class="swiper-slide"><img src="images/index_zb4.jpg"></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div><div id="shoplist-container"></div><script type="text/html" id="list-monopoly"><ul class="clearfix" id="index_hot">
+				{{each list item}}
+				<li class="fl">
+					<a href="html/details.html" target="_blank"><img src="{{item.image}}" /></a>
+					<p>{{item.title}}<br/>
+						<span class="red">￥{{item.price}}</span>
+					</p>
+				</li>
+				{{ /each}}	
+			</ul></script></div><footer id="footer-container"></footer><script src="libs/requirejs/require.js" data-main="js/index.js"></script></body></html>

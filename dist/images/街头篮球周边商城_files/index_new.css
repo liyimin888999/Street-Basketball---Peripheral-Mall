@@ -1,0 +1,98 @@
+@charset "utf-8";
+body{background:white; }
+.full {min-width: 1280px;width: 100%;  margin: 0 auto; height: auto;}
+/*漂浮*/
+.onlinewrap{width: 109px;height: 227px;margin-right: 5px;	position: fixed;top: 10%;right: 0px;z-index:100000;}
+.topkefu{ width:109px; height:29px;cursor: pointer}
+.botkefu{ width:109px; height:138px;	background: url(../images/kefbg.png) no-repeat 0 0; padding-top:60px;}
+.qqimgbt{width:73px; height:19px; margin:0 0 0 22px;}
+
+.top_wrap{height:150px; position:relative; z-index:999;overflow:hidden;zoom:1;}
+.logo_wrap{ height:92px; background:url(../images/logo.png) left center no-repeat; width:270px; margin-left:50px;}
+.logo_wrap a{ display:block;width:104px; height:92px;}
+.top{position:fixed;top:0;*top:38px;left:0;z-index:1;min-width:1240px;width:100%;height:92px; overflow:9999;background:#ffcc00;}
+
+.cs_float{ position:absolute; right:90px; top:60px; display:none;}
+
+/*-导航栏-*/
+.menubar{position:fixed;top:92px;*top:130px;left:0;z-index:-1;margin:0 auto;min-width: 1240px;width: 100%;height:58px; background:#ff9000;}
+.menubar ul{margin:0 20px;line-height:58px; height:58px; color:#fff; font-size:14px;}
+.menubar ul li{float:left; padding:0;position:relative;width:122px;text-align:center;}
+.menubar ul li a{display:block;width:100%;height:45px;padding:0; color:#fff;font-size:18px;}
+.menubar ul li a:hover{text-decoration:none; color:#f94915;font-weight:bold;}
+.nav_menu{ padding-top:40px; height:40px; width:650px; position:relative;}
+.nav_menu li{ height:40px; margin-left:10px;color:#333; position:relative;}
+.nav_menu li.cartLi{ margin:0; border:1px solid #ffcc00; border-bottom:none; position:relative; width:90px;}
+.userId{ padding-right:5px;}
+.nav_menu li a{ color:#333; line-height:25px;}
+.nav_menu li a:hover{ text-decoration:none;}
+.cartList{ position:absolute;width:80px; padding-left:10px; z-index:5; left:-2px; top:0; height:40px; border:1px solid #ffcc00; border-bottom:none;}
+.cartLiHover{ background:white; border-color:#ccc;}
+.cartList a{ display:block; margin-left:10px;}
+.navLine{ display:block; line-height:25px;}
+.icon{ display:block; background:url(../images/icon.png) no-repeat;}
+.orderListIcon{width:14px; height:10px; background-position:-66px 0; margin-top:8px;}
+.MyFavIcon{width:14px; height:11px; background-position:-84px 0; margin-top:8px;}
+.wx_icon{width:12px; height:12px; background:url(../images/wx_icon.png) no-repeat; display:block; margin-top:8px;}
+.cartListIcon{width:16px; height:13px; margin-top:3px; background-position:-100px 0;}
+.count{width:18px; height:13px; position:absolute; background-position:-117px 0; top:-8px; font-size:9px; color:white; text-align:center; line-height:11px; left:21px;}
+.cartDetail{width:320px; background:white; border:1px solid #ccc; position:absolute; right:0; top:39px; z-index:3; display:none;}
+.empty_tip{ line-height:102px; padding-left:10px; color:#333;}
+.cart_ul{ padding-left:13px; padding-top:10px;}
+.cart_ul li{ height:40px;width:305px; overflow:hidden; margin-bottom:14px;}
+.nav_menu .cart_ul li a{ display:block; line-height:40px; color:#999;}
+.cart_img{border:1px solid #ccc; margin-right:12px;}
+.cart_ul li img{width:38px; height:38px;}
+.cart_item_name{ line-height:20px; color:#333;width:120px; margin-right:20px;}
+.cart_item_count{ line-height:40px; color:#ff0000;width:70px;}
+.cart_item_count span{ color:#333;}
+.cart_count{ height:40px; background:#efefef; padding-left:13px;}
+.cart_count p{ padding-left:15px; color:#999; line-height:40px;}
+.cart_count a{ display:block;width:88px; height:24px; line-height:24px; text-align:center;  background:#ff9000; color:white;margin-right:10px; margin-top:8px;}
+.cart_count a:hover{ background:#ff6000; text-decoration:none; }
+.cart_operate{ clear:both; margin-top:30px; height:75px; line-height:75px;}
+.cart_operate li{ height:75px;}
+.operate_checkbox{width:70px; height:75px;color:#666; text-align:center;}
+.operate_checkbox input{ margin-right:5px; vertical-align:middle;}
+.cart_operate a{padding:0 10px;color:#ff9000;}
+.cart_operate li.total{color:#333; font-size:24px; height:auto;}
+.cart_operate li.total p{ line-height:30px; font-size:18px;}
+.cart_operate li.total span{ color:red;}
+.balance_btn{ display:block;width:220px; height:60px; font-size:24px; color:white; line-height:60px; text-align:center; background:#ff9000;}
+.balance_btn:hover{ background:#f46a2e; text-decoration:none;}
+
+
+/*-主体内容-*/
+.mainbar{background:#FFF; height:auto;}
+#index-adv{margin:0 auto;min-height:300px;height:auto;min-width:1240px;width:100%;overflow:hidden; clear:both; position:relative;}
+#index-adv a{margin:0 auto;min-height:300px;height:auto;min-width:1240px;width:100%;display:none;}
+#index-adv img{margin:0 auto;min-height:300px;height:auto;min-width:1240px;width:100%;vertical-align:bottom;font-size:0;border:0;}
+.num{ position:absolute; left:50%; margin-left:-56px; bottom:0px;width:112px; height:38px;}
+.num span{ display:block;width:18px; height:18px; background:#000; margin-right:5px; float:left; cursor:pointer; border-radius:25px;}
+.num span.current{ background:#ff9000;}
+#index_hot{margin:0 auto;min-height:193px;height:auto;min-width:1240px;width:100%;zoom:1;overflow:hidden;}
+#index_hot li{width:25%;*margin-right: -1px;float:left;min-height:193px;height:auto;text-align:center;zoom:1;}
+#index_hot li a{display:block; margin:0px auto; width:100%; min-height:193px;height:auto; font-size:16px; text-decoration:none; color:#333;}
+#index_hot li a img{display:block; width:100%; min-height:193px;height:auto;vertical-align:bottom;}
+#index_hot li a:hover{ text-decoration:none;}
+#index_hot li p{ color:#000; font-size:22px; line-height:25px;}
+
+
+
+/* 底部内容 */
+.bottomDiv{ margin-top:80px; background:#333; padding:40px 0; clear:both;}
+.bottomDiv .w980{width:980px; margin:0 auto; clear:both;}
+.bottom_ul{ margin-bottom:40px;}
+.bottom_ul li{width:130px; padding-left:65px; height:136px; border-right:1px solid #3d3d3d; overflow:hidden;}
+.bottom_ul li.contact{ text-align:center; border:none;}
+.bottom_ul li.contact a.cs{width:120px; height:40px; line-height:40px; margin:0 auto; font-size:14px; color:black; background:#ff9000;}
+.bottom_ul li.contact a:hover{ text-decoration:none;}
+.bottom_ul li h3{ font-size:16px; color:white; margin-bottom:15px;}
+.bottom_ul li  a{ color:#999; display:block; height:18px; line-height:18px; margin-bottom:15px;}
+.company_info{ clear:both; padding-left:145px; position:relative; padding-top:30px;}
+.company_info p{ line-height:24px; color:#999;}
+.company_info p a{ color:#ff9000; padding-right:6px;}
+.t2cn_logo{ display:block; background:url(../images/t2cn_logo.png) no-repeat; width:107px; height:44px; position:absolute; left:0; top:45px;}
+
+
+

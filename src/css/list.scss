@@ -1,0 +1,178 @@
+@import "module/header.scss";
+@import "module/footer.scss";
+* {
+	margin: 0;
+	padding: 0;
+}
+ul li,
+ol li {
+	list-style: none;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+}
+
+img {
+	vertical-align: top;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+}
+div{
+	display: block;
+}
+
+/* 产品详情页 */
+.mainContent {
+	margin-top: 30px;
+}
+
+.w980 {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* product list */
+.innerTitle {
+	margin-top: 30px;
+	border-bottom: 3px solid #ff9000;
+	margin-bottom: 40px;
+}
+
+.innerTitle h2 {
+	background: #ff9000;
+	font-size: 18px;
+	font-weight: normal;
+	color: white;
+	padding-left: 20px;
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.innerTopLink {
+	height: 40px;
+	line-height: 40px;
+	color: #999;
+	font-size: 14px;
+}
+
+.innerTopLink a {
+	color: #999;
+}
+
+.productList {
+	border-left: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	width: 976px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.productList li {
+	float: left;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: 243px;
+	height: 360px;
+	padding-top: 40px;
+	position: relative;
+}
+
+.productList li div {
+	width: 168px;
+	margin: 0 auto;
+}
+.productList li div p{
+	margin: 30px 0;
+}
+.cartAdd {
+	width: 100%;
+	height: 40px;
+	display: block;
+	cursor: pointer;
+	line-height: 40px;
+	font-size: 18px;
+	color: white;
+	text-align: center;
+	background: #ff9000;
+	margin-top: 20px;
+}
+
+.cartAdd:hover {
+	text-decoration: none;
+	background: #f46a2e;
+}
+
+.icon_fav {
+	display: block;
+	width: 21px;
+	height: 17px;
+	background-position: -120px -46px;
+	right: 16px;
+	top: 16px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.icon_fav_2 {
+	background-position: -98px -46px;
+}
+
+.pagination {
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	clear: both;
+	margin-bottom: 30px;
+}
+.fr {
+    float: right;
+    //display: inline;
+}
+.page_num {
+	width: 68px;
+	height: 30px;
+	text-align: center;
+	color: #666;
+	letter-spacing: 5px;
+}
+.fl {
+    float: left;
+    //display: inline;
+}
+.page_num em {
+	color: #ff9000;
+}
+
+.page_prev,
+.page_next {
+	float: left;
+	display: block;
+	width: 38px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	color: #ccc;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.page_prev:hover,
+.page_next:hover {
+	background: #efefef;
+	text-decoration: none;
+}
+
+.page_next {
+	border-left: none;
+}

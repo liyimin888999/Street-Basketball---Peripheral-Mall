@@ -1,0 +1,249 @@
+@import "module/header.scss";
+@import "module/footer.scss";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul li,
+ol li {
+	list-style: none;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+}
+
+img {
+	vertical-align: top;
+}
+
+a {
+	outline: none;
+	text-decoration: none;
+}
+div{
+	display: block;
+}
+
+/* 购物车 */
+.mainContent{
+    margin-top: 30px;
+}
+#cart-container,.w980{
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+.innerTitle{
+    margin-top: 10px;
+    border-bottom: 3px solid #ff9000;
+    margin-bottom: 40px;
+}
+.innerTitle h2{
+    background: #ff9000;
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+    padding-left: 20px;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+}
+.innerTopLink{
+    height: 40px;
+    line-height: 40px;
+    color: #999;
+    font-size: 14px;
+}
+.innerTopLink a{
+    color: #999;
+}
+.ShoppingCart{
+    padding: 20px 20px 40px;
+    border: 1px solid #ccc;
+}
+.cart_nav {
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+.cart_nav li {
+    float: left;
+    background: #efefef;
+    line-height: 60px;
+    text-align: center;
+    color: #666;
+    margin-right: 1px;
+}
+.cart_nav li:nth-child(1){
+    width: 400px;
+}
+.cart_nav li:nth-child(2){
+    width: 140px;
+}
+.cart_nav li:nth-child(3){
+    width: 140px;
+}
+.cart_nav li:nth-child(4){
+    width: 140px;
+}
+.cart_nav li:nth-child(5){
+    width: 110px;
+}
+.cart_operate{
+    clear: both;
+    margin-top: 30px;
+    height: 75px;
+    line-height: 75px;
+}
+.cart_operate li {
+    display: block;
+    margin-left: 25px;
+    height: 48px;
+    line-height: 48px;
+}
+.cart_operate li .operate_checkbox{
+    float: left;
+    width: 110px;
+}
+.cart_operate li .operate_checkbox input{
+    float: left;
+}
+.cart_operate li p{
+    width: 110px;
+    display: block;
+}
+.cart_operate li p:nth-child(2){
+    float: right;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.cart_operate li p:nth-child(3){
+    float: right;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.cart_operate a {
+    padding: 0 0px;
+    color: #ff9000;
+}
+.clearfixl {
+    float: right;
+    display: block;
+}
+.clearfixl .common_link1{
+    color: #000000;
+    font-size: 20px;
+}
+.cart_list{
+    width:940px; 
+    display:block; 
+    clear:both; 
+    margin:0 auto;
+}
+.cart_list li{ 
+    height:138px; 
+    border-bottom:1px solid #efefef; 
+    clear:both;
+}
+.cart_list li span,.cart_list li a{ 
+    float: left;
+}
+.cart_checkbox{
+    width:55px; 
+    text-align:center; 
+    height:63px; 
+    padding-top:75px;
+}
+.cart_list li a.img{
+    float: left;
+    width:120px; 
+    margin-right:20px; 
+    height:120px; 
+    vertical-align:middle; 
+    margin-top:5px;
+}
+.cart_list li a.img img{
+    width:118; 
+    height:118px; 
+    border:1px solid #ccc;
+}
+.cart_list li div.name{ 
+    float: left;
+    font-size:18px;
+    color:#333; 
+    line-height:25px;
+     padding-top:30px;
+     width:182px; 
+     margin-right:15px;
+}
+.cart_list li div.name p{ 
+    font-size:14px; 
+    color:#999;
+}
+.cart_list li div.quantity_wrap{
+    float: left;
+    width: 137px;
+    height: 80px;
+    clear:none; 
+    padding-top:50px; 
+    margin:0;
+}
+.quantity_wrap {
+    float: left;
+    clear: both;
+    height: 30px;
+    color: #999;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.quantity_wrap p input {
+    float: left;
+    width: 62px;
+    height: 28px;
+    border: 1px solid #000000;
+    text-align: center;
+    line-height: 28px;
+    color: #999;
+}
+.quantity_wrap a {
+    float: left;
+    width: 18px;
+    height: 28px;
+    border: 1px solid #efefef;
+    margin: 0;
+    text-align: center;
+    line-height: 28px;
+    color: #ccc;
+}
+.price:nth-child(5){
+    float: left;
+    width:140px; 
+    text-align:center; 
+    font-size:22px;
+    color:red; 
+    line-height:138px;
+}
+.price:nth-child(6){
+    float: left;
+    width:140px; 
+    text-align:center; 
+    font-size:22px;
+    color:red; 
+    line-height:138px;
+}
+.cartDel{
+    float: left;
+    width:110px; 
+    padding-top:60px;
+}
+.cartDel a{
+    float: left;
+    font-size: 20px;
+    margin:0 50px;
+}

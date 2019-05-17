@@ -1,0 +1,1 @@
+"use strict";define(["jquery"],function(n){function t(){this.container=n("#footer-container"),this.load().then(function(){})}return n.extend(t.prototype,{load:function(){var t=this;return new Promise(function(n){t.container.load("/html/module/footer.html",function(){n()})})}}),new t});

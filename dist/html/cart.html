@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>街头篮球-周边商城购物车</title><link rel="stylesheet" href="../css/cart.css"></head><body><header id="header-container"></header><div class="mainContent w980"><div class="innerTitle"><h2>产品分类</h2></div><p class="innerTopLink"><a href="../index.html">首页</a>>购物车</p><div class="ShoppingCart"><ul class="clearfix cart_nav"><li class="fl">产品</li><li class="fl">数量</li><li class="fl">价格(元)</li><li class="fl">总计(元)</li><li class="fl">操作</li></ul><div id="cart-container"></div><script type="text/html" id="cart-template">{{each cart item}}
+                <ul class="clearfix cart_list">
+                <li>
+                        <span class="fl cart_checkbox">
+                            <input class="checkbox" type="checkbox"/>
+                        </span>
+                        <a href="" target="_blank" class="img fl"><img
+                                src="{{item.image[0]}}" /></a>
+                        <div class="fl name">
+                            {{item.title}}
+                            <p>规格:长宽：600mm*400mm 厚度：4mm 颜色:十三周年款</p>
+                        </div>
+                        <div class="quantity_wrap clearfix fl" data-id="{{item.id}}">
+                            <a class="fl count_minus" href="javascript:;" >-</a>
+                            <p class="fl">
+                                <input id="QC0057" type="text" value="{{item.num}}" class="shop_count"/>
+                            </p>
+                            <a class="fl count_plus" href="javascript:;" >+</a>
+                            <span style="clear:both;"></span>
+                        </div>
+                        <p class="price fl" id="price"><b>￥{{item.price}}</b></p>
+                        <p class="price fl sum-price">￥<b>{{item.num*item.price}}</b></p>
+                        <div class="fl cartDel">
+                            <a class="icon png24 ht deleteBtn" data-id="{{item.id}}" href="javascript:;">X</a>
+                        </div>
+                    </li>
+                </ul>
+                {{/each}}</script><ul class="clearfix cart_operate"><li class="fl operate_checkbox"><input id="check" type="checkbox"> 全选<p>￥:<span id="allprice">0</span>(元)</p><p>订单总计</p></li><li class="fl"><a href="../index.html">继续购物</a></li></ul><div style="clear:both" class="clearfixl"><a href="javascript:;" class="fr common_link1">结算</a></div></div></div><footer id="footer-container"></footer><script src="../libs/requirejs/require.js" data-main="../js/cart.js"></script></body></html>
